@@ -162,3 +162,28 @@ header{
     }
 
 }
+
+.logo img{
+    height:70px;
+    width:auto;
+}
+
+.social-footer{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:30px;
+    margin-top:40px;
+}
+
+.social-footer img{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.social-footer img:hover{
+    transform:scale(1.15);
+}
