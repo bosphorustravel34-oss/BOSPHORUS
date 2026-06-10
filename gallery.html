@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Bosphorus Travel</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+
+.gallery-title{
+    text-align:center;
+    margin-top:180px;
+    margin-bottom:40px;
+    font-size:42px;
+}
+
+.gallery{
+    max-width:1400px;
+    margin:auto;
+    padding:20px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:16px;
+}
+
+.whatsapp-btn{
+    display:block;
+    width:fit-content;
+    margin:50px auto;
+    padding:18px 35px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="assets/images/LOGO.png" alt="">
+</div>
+
+<div class="languages">
+<button onclick="history.back()">← Back</button>
+</div>
+
+</header>
+
+<h1 class="gallery-title" id="galleryTitle"></h1>
+
+<div class="gallery" id="gallery"></div>
+
+<a
+class="whatsapp-btn"
+href="https://wa.me/905421914498"
+target="_blank">
+WhatsApp Reservation </a>
+
+<script>
+
+const category = new URLSearchParams(window.location.search).get("category");
+
+const data = {
+
+istanbul:[
+"assets/images/istanbul/İ1.jpg",
+"assets/images/istanbul/İ2.jpg",
+"assets/images/istanbul/İ3.jpg",
+"assets/images/istanbul/İ4.jpg",
+"assets/images/istanbul/İ5.jpg",
+"assets/images/istanbul/İ6.jpg",
+"assets/images/istanbul/İ7.jpg",
+"assets/images/istanbul/İ8.jpg",
+"assets/images/istanbul/İ9.jpg",
+"assets/images/istanbul/İ10.jpg",
+"assets/images/istanbul/İ11.jpg",
+"assets/images/istanbul/İ12.jpg",
+"assets/images/istanbul/İ13.jpg",
+"assets/images/istanbul/İ14.jpg",
+"assets/images/istanbul/İ15.jpg"
+],
+
+kapadokya:[
+"assets/images/kapadokya/K1.jpg",
+"assets/images/kapadokya/K2.jpg",
+"assets/images/kapadokya/K3.jpg",
+"assets/images/kapadokya/K4.jpg",
+"assets/images/kapadokya/K5.jpg",
+"assets/images/kapadokya/K6.jpg",
+"assets/images/kapadokya/K7.jpg",
+"assets/images/kapadokya/K8.jpg",
+"assets/images/kapadokya/K9.jpg",
+"assets/images/kapadokya/K10.jpg"
+],
+
+antalya:[
+"assets/images/antalya/A1.jpg",
+"assets/images/antalya/A2.jpg",
+"assets/images/antalya/A3.jpg",
+"assets/images/antalya/A4.jpg",
+"assets/images/antalya/A5.jpg",
+"assets/images/antalya/A6.jpg"
+],
+
+"vip-transfer":[
+"assets/images/vip-transfer/2.jpg",
+"assets/images/vip-transfer/3.jpg",
+"assets/images/vip-transfer/4.jpg",
+"assets/images/vip-transfer/5.jpg",
+"assets/images/vip-transfer/6.jpg",
+"assets/images/vip-transfer/7.jpg",
+"assets/images/vip-transfer/8.jpg",
+"assets/images/vip-transfer/9.jpg",
+"assets/images/vip-transfer/10.jpg",
+"assets/images/vip-transfer/11.jpg",
+"assets/images/vip-transfer/12.jpg",
+"assets/images/vip-transfer/13.jpg",
+"assets/images/vip-transfer/14.jpg"
+],
+
+yat:[
+"assets/images/yat/Y1.jpg",
+"assets/images/yat/Y2.jpg",
+"assets/images/yat/Y3.jpg",
+"assets/images/yat/Y4.jpg",
+"assets/images/yat/Y5.jpg",
+"assets/images/yat/Y6.jpg",
+"assets/images/yat/Y7.jpg",
+"assets/images/yat/Y8.jpg",
+"assets/images/yat/Y9.jpg",
+"assets/images/yat/Y10.jpg"
+],
+
+helikopter:[
+"assets/images/helikopter/H1.jpg",
+"assets/images/helikopter/H2.jpg",
+"assets/images/helikopter/H3.jpg",
+"assets/images/helikopter/H4.jpg",
+"assets/images/helikopter/H5.jpg",
+"assets/images/helikopter/H6.jpg",
+"assets/images/helikopter/H7.jpg",
+"assets/images/helikopter/H8.jpg",
+"assets/images/helikopter/H9.jpg",
+"assets/images/helikopter/H10.jpg"
+]
+};
+
+const gallery=document.getElementById("gallery");
+const title=document.getElementById("galleryTitle");
+
+title.textContent=category?.toUpperCase() || "Gallery";
+
+if(data[category]){
+
+data[category].forEach(src=>{
+
+const img=document.createElement("img");
+img.src=src;
+
+gallery.appendChild(img);
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

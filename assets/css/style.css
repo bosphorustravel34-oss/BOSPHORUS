@@ -187,3 +187,8 @@ header{
 .social-footer img:hover{
     transform:scale(1.15);
 }
+
+.card-link{
+    text-decoration:none;
+    color:inherit;
+}
