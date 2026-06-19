@@ -1,4 +1,3 @@
-alert("KART SLIDER CALISTI");
 const heroImages = [
     "assets/images/hero/HERO1.jpg",
     "assets/images/hero/HERO2.jpg",
