@@ -10,10 +10,12 @@ const heroImages = [
 let heroIndex = 0;
 
 setInterval(() => {
-    heroIndex = (heroIndex + 1) % heroImages.length;
-    document.getElementById("heroImage").src = heroImages[heroIndex];
+    const hero = document.getElementById("heroImage");
+    if(hero){
+        heroIndex = (heroIndex + 1) % heroImages.length;
+        hero.src = heroImages[heroIndex];
+    }
 }, 10000);
-
 
 function slider(id, images, time = 5000) {
 
