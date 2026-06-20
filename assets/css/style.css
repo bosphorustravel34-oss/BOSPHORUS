@@ -228,3 +228,36 @@ header{
         grid-template-columns:1fr;
     }
 }
+.page-header{
+    position:relative;
+    text-align:center;
+    padding:15px 20px;
+    border-bottom:1px solid #eee;
+    margin-bottom:30px;
+}
+
+.page-header img{
+    width:120px;
+    height:auto;
+}
+
+.close-btn{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:28px;
+    text-decoration:none;
+    color:#333;
+    font-weight:300;
+}
+
+.close-btn:hover{
+    opacity:.7;
+}
+
+.page-content{
+    max-width:1000px;
+    margin:0 auto;
+    padding:20px 30px 50px;
+    line-height:1.8;
+}
